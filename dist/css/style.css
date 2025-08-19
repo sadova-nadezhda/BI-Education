@@ -1225,11 +1225,14 @@ h6 {
 .feedback__form select {
   width: 100%;
   background: url(../img/select-arrow-2.svg) calc(100% - 16 * var(--width-multiplier)) 50%/calc(20 * var(--width-multiplier)) no-repeat;
+  cursor: pointer;
 }
 
 .feedback__form option {
   padding: calc(12 * var(--width-multiplier));
+  color: var(--black, #000000);
   background-color: var(--white, #FFFFFF);
+  cursor: pointer;
 }
 
 .feedback__form button {
