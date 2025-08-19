@@ -1,0 +1,36 @@
+<div class="modals">
+  <div class="modal" data-type="consultation">
+    <div class="modal__container">
+      <div class="modal__top">
+        <div class="modal__caption">Запишитесь <br> на консультацию</div>
+        <button class="modal__close">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 4.99107C20 4.7238 19.896 4.47243 19.707 4.28362C19.3291 3.90546 18.6709 3.90546 18.293 4.28362L12 10.5803L5.70703 4.28362C5.3291 3.90546 4.6709 3.90546 4.29297 4.28362C4.10402 4.47243 4 4.72381 4 4.99107C4 5.2583 4.10402 5.50968 4.29297 5.69852L10.5859 11.9952L4.29297 18.2919C4.10402 18.4808 4 18.7321 4 18.9994C4 19.2666 4.10402 19.518 4.29297 19.7068C4.6709 20.085 5.3291 20.085 5.70703 19.7068L12 13.4101L18.293 19.7069C18.482 19.8959 18.7329 20 19 20C19.2671 20 19.5181 19.8959 19.707 19.7069C19.896 19.518 20 19.2666 20 18.9994C20 18.7321 19.896 18.4808 19.707 18.2919L13.4141 11.9952L19.707 5.69852C19.896 5.50968 20 5.2583 20 4.99107Z" fill="black"/>
+          </svg>
+        </button>
+      </div>
+      <div class="modal__form form">
+        <form action="">
+          <div class="form__group">
+            <label for="form-name">Ваше имя</label>
+            <input type="text" id="form-name" placeholder="Алексей" required>
+          </div>
+          <div class="form__group">
+            <label for="form-phone">Номер телефона</label>
+            <input type="tel" id="form-phone" placeholder="+7 (___) ___-__-__" required>
+          </div>
+          <div class="form__group">
+            <label for="form-city">В каком городе планируете обучение?</label>
+            <select name="" id="form-city">
+              <option value="">Выбрать город</option>
+              <option value="">Астана</option>
+              <option value="">Алматы</option>
+            </select>
+          </div>
+          <div class="form__agreement">Нажимая кнопку вы подтверждаете свое согласие на <a href="" target="_blank">обработку персональных данных</a></div>
+          <button class="form__button button button-primary">Отправить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

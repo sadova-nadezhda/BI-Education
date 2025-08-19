@@ -2,6 +2,7 @@ window.addEventListener("load", function () {
   let header = document.querySelector("header");
   let link = document.querySelector(".header__burger");
   let menu = document.querySelector(".header__nav");
+
   if (menu) {
     link.addEventListener(
       "click",
@@ -29,6 +30,7 @@ window.addEventListener("load", function () {
       }
     });
   }
+
   function checkScroll() {
     if (window.scrollY > 0) {
       header.classList.add("scroll");
@@ -38,6 +40,88 @@ window.addEventListener("load", function () {
   }
 
   checkScroll();
+
+  // Modals
+
+  function hideModal(modal) {
+    modal.addEventListener('click', function(e) {
+      const target = e.target;
+      if (
+        target.classList.contains("modal__close") ||
+        target.classList.contains("modals") ||
+        target.classList.contains("close")
+      ) {
+        modal.style.transition = "opacity 0.4s";
+        modal.style.opacity = "0";
+        setTimeout(() => {
+          modal.style.display = "none";
+        }, 400);
+      }
+    });
+  }
+  function showModal(modal) {
+    modal.style.display = "flex";
+    setTimeout(() => {
+      modal.style.transition = "opacity 0.4s";
+      modal.style.opacity = "1";
+    }, 10);
+  } 
+
+  let modals = document.querySelector('.modals')
+  let modalAll = document.querySelectorAll('.modal')
+  let modalBtns = document.querySelectorAll(".modal-btn");
+
+  if(modals && modalBtns){
+    hideModal(modals);
+    modalBtns.forEach( btn => {
+      btn.addEventListener('click', () => {
+        showModal(modals)
+        let typeBtn = btn.dataset.type;
+        modalAll.forEach( modal => {
+          let typeModal = modal.dataset.type;
+          modal.style.display = 'none'
+          if(typeBtn == typeModal) {
+            modal.style.display = 'block'
+          }
+        });
+      })
+    })
+  }
+
+  // Phone
+  
+  [].forEach.call( document.querySelectorAll('input[type="tel"]'), function(input) {
+    var keyCode;
+    function mask(event) {
+        event.keyCode && (keyCode = event.keyCode);
+        var pos = this.selectionStart;
+        if (pos < 3) event.preventDefault();
+        var matrix = "+7 (___) ___ ____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, ""),
+            new_value = matrix.replace(/[_\d]/g, function(a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+            });
+        i = new_value.indexOf("_");
+        if (i != -1) {
+            i < 5 && (i = 3);
+            new_value = new_value.slice(0, i)
+        }
+        var reg = matrix.substring(0, this.value.length).replace(/_+/g,
+            function(a) {
+                return "\\d{1," + a.length + "}"
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+        if (event.type == "blur" && this.value.length < 5)  this.value = ""
+    }
+
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false);
+  });
 
 
   window.addEventListener("scroll", ()=> {

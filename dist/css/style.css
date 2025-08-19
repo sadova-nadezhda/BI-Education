@@ -586,6 +586,117 @@ h6 {
   overflow: hidden;
 }
 
+.modals {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100dvh;
+  padding: calc(50 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+  background-color: rgba(0, 0, 0, 0.26);
+  overflow-y: auto;
+  overflow-x: hidden;
+  z-index: 99;
+}
+
+.modal {
+  position: relative;
+  display: none;
+  width: 100%;
+  max-width: calc(508 * var(--width-multiplier));
+  margin: auto;
+  padding: calc(36 * var(--width-multiplier));
+  border-radius: calc(16 * var(--width-multiplier));
+  background-color: var(--white, #FFFFFF);
+  overflow: hidden;
+}
+
+.modal.active {
+  display: block;
+}
+
+.modal__top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: calc(16 * var(--width-multiplier));
+  margin-bottom: calc(36 * var(--width-multiplier));
+}
+
+.modal__caption {
+  font-weight: 500;
+  font-size: calc(26 * var(--width-multiplier));
+  line-height: 1.2em;
+}
+
+.modal__close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background-color: transparent;
+}
+
+.modal__close svg {
+  min-width: calc(24 * var(--width-multiplier));
+  width: calc(24 * var(--width-multiplier));
+  height: calc(24 * var(--width-multiplier));
+  pointer-events: none;
+}
+
+.modal__close:hover {
+  cursor: pointer;
+}
+
+.form form {
+  display: flex;
+  flex-direction: column;
+  gap: calc(20 * var(--width-multiplier));
+}
+
+.form select,
+.form input {
+  width: 100%;
+  background-color: var(--white, #FFFFFF);
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: calc(14 * var(--width-multiplier));
+}
+
+.form__group label {
+  font-weight: 500;
+  line-height: 1;
+}
+
+.form__agreement {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: calc(12 * var(--width-multiplier));
+}
+
+.form__agreement a {
+  color: var(--blue, #005FFF);
+}
+
+.form__agreement a:hover {
+  text-decoration: underline;
+}
+
+.form__button {
+  width: 100%;
+  margin-top: calc(16 * var(--width-multiplier));
+}
+
 .hero {
   position: relative;
 }
@@ -1221,6 +1332,22 @@ h6 {
     padding-bottom: calc(80 * var(--width-multiplier));
   }
 
+  .modal {
+    padding: calc(24 * var(--width-multiplier));
+  }
+
+  .modal__top {
+    margin-bottom: calc(20 * var(--width-multiplier));
+  }
+
+  .modal__caption {
+    font-size: calc(24 * var(--width-multiplier));
+  }
+
+  .form form {
+    gap: calc(16 * var(--width-multiplier));
+  }
+
   .hero__container {
     padding: calc(80 * var(--width-multiplier)) 0;
   }
@@ -1360,6 +1487,12 @@ h6 {
     --width-current: 100vmin;
   }
 
+  input,
+  textarea,
+  select {
+    padding: calc(12 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+  }
+
   .button {
     width: 100%;
     padding: calc(12 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
@@ -1422,6 +1555,18 @@ h6 {
 
   .section-pad-bottom {
     padding-bottom: calc(60 * var(--width-multiplier));
+  }
+
+  .modal {
+    padding: calc(24 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+  }
+
+  .modal__caption {
+    font-size: calc(22 * var(--width-multiplier));
+  }
+
+  .form__button {
+    margin-top: calc(8 * var(--width-multiplier));
   }
 
   .hero__container {

@@ -145,6 +145,9 @@ input, textarea, select {
   &::placeholder {
     color: rgba(0, 0, 0, 0.5);
   }
+  @media(max-width: 767px) {
+    padding: calc(12 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+  }
 }
 
 textarea {
