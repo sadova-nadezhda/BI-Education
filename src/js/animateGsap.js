@@ -17,7 +17,7 @@ export function animateGsap() {
   });
 
   gsap.to(".hero-op", {
-    duration: 1,
+    duration: 0.8,
     opacity: 1
   });
 
@@ -29,7 +29,7 @@ export function animateGsap() {
   gsap.to(".about-down", {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.8,
     ease: "power2.inOut",
     scrollTrigger: {
       trigger: ".about-trigger",
@@ -44,7 +44,7 @@ export function animateGsap() {
     scale: 0.6,
   });
   gsap.to(".about-scale", {
-    duration: 1.6,
+    duration: 0.8,
     opacity: 1,
     scale: 1,
     ease: "power2.inOut",
@@ -62,7 +62,7 @@ export function animateGsap() {
     y: 100
   });
   gsap.to(".about-img", {
-    duration: 1.5,
+    duration: 0.8,
     opacity: 1,
     y: 0,
     ease: "power.inOut",
@@ -80,7 +80,7 @@ export function animateGsap() {
     y: 100
   });
   gsap.to(".mission-up", {
-    duration: 1.5,
+    duration: 0.8,
     opacity: 1,
     y: 0,
     ease: "power.inOut",
@@ -101,7 +101,7 @@ export function animateGsap() {
   gsap.to(".mission-down", {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.8,
     ease: "power2.inOut",
     scrollTrigger: {
       trigger: ".mission__wrap",
@@ -119,7 +119,7 @@ export function animateGsap() {
   gsap.to(".worth-down", {
     opacity: 1,
     y: 0,
-    duration: 1,
+    duration: 0.8,
     ease: "power2.inOut",
     scrollTrigger: {
       trigger: ".worth__wrap",
@@ -134,7 +134,7 @@ export function animateGsap() {
     scale: 0.6,
   });
   gsap.to(".worth-scale", {
-    duration: 1.6,
+    duration: 1,
     opacity: 1,
     scale: 1,
     ease: "power2.inOut",
@@ -152,7 +152,7 @@ export function animateGsap() {
     opacity: 0
   });
   gsap.to(".projects-down", {
-    duration: 1.6,
+    duration: 0.8,
     y: 0,
     opacity: 1,
     ease: "power2.inOut",
@@ -170,10 +170,11 @@ export function animateGsap() {
     x: -200
   });
   gsap.to(".pbox-left", {
-    duration: 1.6,
+    duration: 1,
     x: 0,
     opacity: 1,
     scale: 1,
+    stagger: 0.5,
     ease: "power2.inOut",
     yoyo: true,
     scrollTrigger: {
@@ -190,9 +191,10 @@ export function animateGsap() {
     opacity: 0,
   });
   gsap.to(".pbox-right", {
-    duration: 1.6,
+    duration: 1,
     x: 0,
     opacity: 1,
+    stagger: 0.1,
     ease: "power2.inOut",
     yoyo: true,
     scrollTrigger: {
@@ -208,7 +210,7 @@ export function animateGsap() {
     opacity: 0
   });
   gsap.to(".services-down", {
-    duration: 1.6,
+    duration: 0.8,
     y: 0,
     opacity: 1,
     ease: "power2.inOut",
@@ -252,7 +254,7 @@ export function animateGsap() {
     opacity: 0
   });
   gsap.to(".feedback-down", {
-    duration: 1.6,
+    duration: 0.8,
     y: 0,
     opacity: 1,
     ease: "power2.inOut",
@@ -270,7 +272,7 @@ export function animateGsap() {
     opacity: 0
   });
   gsap.to(".feedback-up", {
-    duration: 1.6,
+    duration: 0.8,
     y: 0,
     opacity: 1,
     ease: "power2.inOut",
@@ -288,7 +290,7 @@ export function animateGsap() {
     scale: 0.8
   });
   gsap.to(".feedback-form", {
-    duration: 1.6,
+    duration: 1,
     opacity: 1,
     scale: 1,
     ease: "power2.inOut",
