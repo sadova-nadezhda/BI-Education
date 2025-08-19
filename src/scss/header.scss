@@ -14,6 +14,12 @@
     font-size: calc(14 * var(--width-multiplier));
     line-height: 1;
     transition: padding 0.3s ease-in-out;
+    @media(max-width: 1024px) {
+      padding: calc(16 * var(--width-multiplier)) 0;
+    }
+    @media(max-width: 767px) {
+      padding: calc(10 * var(--width-multiplier)) 0;
+    }
   }
   &__wrap {
     display: flex;
@@ -38,6 +44,7 @@
     }
   }
   &__nav {
+    transition: left 0.3s ease-in-out;
     &.open {
       left: 0;
     }
@@ -45,11 +52,17 @@
       position: absolute;
       top: 100%;
       left: -100%;
-      display: block;
-      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: calc(32 * var(--width-multiplier));
+      min-height: calc(100dvh - calc(78 * var(--width-multiplier)));
       min-width: 320px;
-      padding: calc(40 * var(--width-multiplier));
+      padding: calc(32 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
       background-color: var(--white, $white);
+    }
+    @media(max-width: 767px) {
+      min-height: calc(100vh - calc(60 * var(--width-multiplier)));
+      width: 100%;
     }
   }
   &__menu {
@@ -71,6 +84,9 @@
     display: flex;
     align-items: center;
     gap: calc(6 * var(--width-multiplier));
+    @media(max-width: 1024px) {
+      display: none;
+    }
     a {
       display: flex;
       align-items: center;
@@ -80,13 +96,25 @@
       border-radius: 100%;
       color: var(--black, $black);
       background-color: var(--white, $white);
-      transition: color 0.3s ease-in-out;
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0);
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
       &.active {
         color: var(--white, $white);
         background-color: var(--primary, $primary);
       }
       &:hover:not(.active) {
-        color: var(--primary, $primary);
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.5);
+        transform: scale(0.9);
+      }
+      @media(max-width: 1024px) {
+        box-shadow: 0 0 16px rgba(0, 0, 0, 0.1);
+      }
+    }
+    &_mb {
+      display: none;
+      @media(max-width: 1024px) {
+        display: flex;
+        gap: calc(16 * var(--width-multiplier));
       }
     }
   }
@@ -94,19 +122,44 @@
     display: flex;
     align-items: center;
     gap: calc(6 * var(--width-multiplier));
+    @media(max-width: 1024px) {
+      display: none;
+    }
+    &_mb {
+      display: none;
+      @media(max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: calc(16 * var(--width-multiplier));
+        margin-top: auto;
+      }
+    }
   }
   &__button {
     min-height: calc(50 * var(--width-multiplier));
+    @media(max-width: 1024px) {
+      width: 100%;
+    }
   }
   &__burger {
     position: relative;
     display: none;
-    width: calc(30 * var(--width-multiplier));
-    height: calc(30 * var(--width-multiplier));
+    width: calc(40 * var(--width-multiplier));
+    height: calc(40 * var(--width-multiplier));
+    padding: calc(10 * var(--width-multiplier)) calc(8 * var(--width-multiplier));
+    border-radius: calc(8 * var(--width-multiplier));
     background-color: var(--primary, $primary);
     cursor: pointer;
     @media(max-width: 1024px) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    span {
+      width: 100%;
+      height: 2px;
+      background-color: var(--white, $white);
     }
   }
   &.scroll {
@@ -114,6 +167,15 @@
     box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
     .header__container {
       padding: calc(10 * var(--width-multiplier)) 0;
+      @media(max-width: 1024px) {
+        padding: calc(16 * var(--width-multiplier)) 0;
+      }
     }
+    @media(max-width: 1024px) {
+      box-shadow: unset;
+    }
+  }
+  @media(max-width: 1024px) {
+    background-color: var(--white, $white);
   }
 }

@@ -219,6 +219,8 @@ select {
   }
   @media (max-width: 767px) {
     width: 100%;
+    padding: calc(12 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
+    font-size: calc(14 * var(--width-multiplier));
   }
 }
 
@@ -227,40 +229,40 @@ select {
 h1 {
   font: 500 calc(82 * var(--width-multiplier))/1 Gotham;
   @media (max-width: 1024px) {
-    font-size: 42px;
+    font-size: calc(42 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 32px;
+    font-size: calc(32 * var(--width-multiplier));
   }
 }
 
 h2 {
   font: 500 calc(52 * var(--width-multiplier))/1.2 Gotham;
   @media (max-width: 1024px) {
-    font-size: 32px;
+    font-size: calc(32 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 24px;
+    font-size: calc(24 * var(--width-multiplier));
   }
 }
 
 h3 {
   font: 500 calc(32 * var(--width-multiplier))/1.2 Gotham;
   @media (max-width: 1024px) {
-    font-size: 24px;
+    font-size: calc(24 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 22px;
+    font-size: calc(22 * var(--width-multiplier));
   }
 }
 
 h4 {
   font: 500 calc(24 * var(--width-multiplier))/1.2 Gotham;
   @media (max-width: 1024px) {
-    font-size: 22px;
+    font-size: calc(22 * var(--width-multiplier));
   }
   @media (max-width: 767px) {
-    font-size: 20px;
+    font-size: calc(20 * var(--width-multiplier));
   }
 }
 
