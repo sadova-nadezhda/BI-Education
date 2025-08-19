@@ -40,7 +40,7 @@ window.addEventListener("load", function () {
           closeAllDropdowns();
           parent.classList.add("open");
           const dropdown = parent.querySelector(".dropdown-menu");
-          dropdown.style.maxHeight = dropdown.scrollHeight + 30 + "px";
+          dropdown.style.maxHeight = dropdown.scrollHeight + 32 + "px";
           dropdown.style.paddingTop = "30px";
         });
 
