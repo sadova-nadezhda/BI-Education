@@ -31,24 +31,46 @@ window.addEventListener("load", function () {
 
     const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener("click", function (e) {
-        e.preventDefault();
+    // Десктоп: hover
+    if (window.innerWidth > 1024) {
+      dropdownToggles.forEach(toggle => {
         const parent = toggle.closest(".button-dropdown");
-        const dropdown = parent.querySelector(".dropdown-menu");
-        const height = dropdown.scrollHeight;
 
-        if (dropdown.style.maxHeight) {
-          dropdown.style.maxHeight = null;
-          dropdown.style.padding = 0;
-        } else {
+        parent.addEventListener("mouseenter", () => {
           closeAllDropdowns();
-
-          dropdown.style.maxHeight = height + "px";
           parent.classList.add("open");
-        }
+          const dropdown = parent.querySelector(".dropdown-menu");
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+        });
+
+        parent.addEventListener("mouseleave", () => {
+          parent.classList.remove("open");
+          const dropdown = parent.querySelector(".dropdown-menu");
+          dropdown.style.maxHeight = null;
+        });
       });
-    });
+    }
+
+    // Мобильный: click
+    else {
+      dropdownToggles.forEach(toggle => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const parent = toggle.closest(".button-dropdown");
+          const dropdown = parent.querySelector(".dropdown-menu");
+          const height = dropdown.scrollHeight;
+
+          if (parent.classList.contains("open")) {
+            parent.classList.remove("open");
+            dropdown.style.maxHeight = null;
+          } else {
+            closeAllDropdowns();
+            dropdown.style.maxHeight = height + "px";
+            parent.classList.add("open");
+          }
+        });
+      });
+    }
 
     function closeAllDropdowns() {
       document.querySelectorAll(".button-dropdown").forEach(item => {
@@ -56,7 +78,7 @@ window.addEventListener("load", function () {
         const menu = item.querySelector(".dropdown-menu");
         if (menu) {
           menu.style.maxHeight = null;
-        } 
+        }
       });
     }
   }
