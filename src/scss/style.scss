@@ -206,6 +206,7 @@
     min-height: 100vh;
     padding: calc(100 * var(--width-multiplier)) 0;
     color: var(--white, $white);
+    opacity: 0;
     @media(max-width: 1024px) {
       padding: calc(80 * var(--width-multiplier)) 0;
     }
@@ -828,4 +829,10 @@
       margin: 0;
     }
   }
+}
+
+// Animation
+
+.text-op {
+  opacity: 0;
 }

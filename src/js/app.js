@@ -1,3 +1,5 @@
+import { animateGsap } from './animateGsap.js';
+
 window.addEventListener("load", function () {
   let header = document.querySelector("header");
   let link = document.querySelector(".header__burger");
@@ -179,6 +181,7 @@ window.addEventListener("load", function () {
     input.addEventListener("keydown", mask, false);
   });
 
+  animateGsap();
 
   window.addEventListener("scroll", ()=> {
     checkScroll();

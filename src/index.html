@@ -6,14 +6,18 @@
 
     <main>
       <section class="hero section-hidden">
-        <video autoplay loop muted playsinline>
+        <video id="bannerBigvideo" autoplay loop muted playsinline>
           <source src="@img/video.mp4" type="video/mp4">
           Ваш браузер не поддерживает встроенные видео
         </video>
         <div class="container">
-          <div class="hero__container">
-            <h1 class="hero__title">BI Education</h1>
-            <div class="hero__desc">Эксперт в реализации и консалтинге образовательных проектов, создающий передовые условия для обучения и развития.</div>
+          <div class="hero__container hero-op">
+            <div class="hero__wrap">
+              <h1 class="hero__title"><span>BI Education</span></h1>
+              <div class="hero__desc">
+                <p>Эксперт в реализации и консалтинге образовательных проектов, создающий передовые условия для обучения и развития.</p>
+              </div>
+            </div>
             <a class="hero__button button button-primary modal-btn" data-type="consultation">
               <span>Получить консультацию</span>
             </a>
@@ -22,9 +26,9 @@
       </section>
       <section class="about section-pad section-hidden">
         <div class="container">
-          <div class="about__container">
+          <div class="about__container about-trigger">
             <div class="about__row">
-              <div class="about__info">
+              <div class="about__info about-down">
                 <h2 class="about__title">Успешно работаем на рынке с 1995 года</h2>
                 <div class="about__desc">За это время мы прошли путь от небольшой строительной фирмы до международного девелопера с амбициозными проектами в Казахстане и за его пределами. BI Group реализует проекты в сферах жилой и коммерческой недвижимости, инфраструктурного, индустриального и нефтегазового строительства, а также активно развивает направление инвестиций и цифровых решений в строительстве.</div>
                 <a href="" class="about__link">
@@ -36,28 +40,28 @@
                 </a>
               </div>
               <div class="about__benefits">
-                <div class="about__item">
+                <div class="about__item about-scale">
                   <div class="num">13</div>
                   <div class="txt">
                     <span class="zero"></span>
                     <span>школ</span>
                   </div>
                 </div>
-                <div class="about__item">
+                <div class="about__item about-scale">
                   <div class="num">2</div>
                   <div class="txt">
                     <span class="zero">000</span>
                     <span>преподавателей</span>
                   </div>
                 </div>
-                <div class="about__item">
+                <div class="about__item about-scale">
                   <div class="num">3</div>
                   <div class="txt">
                     <span class="zero"></span>
                     <span>детских сада</span>
                   </div>
                 </div>
-                <div class="about__item">
+                <div class="about__item about-scale">
                   <div class="num">35</div>
                   <div class="txt">
                     <span class="zero">000</span>
@@ -66,30 +70,30 @@
                 </div>
               </div>
             </div>
-            <div class="about__img"><img src="@img/image-1.png" alt=""></div>
+            <div class="about__img about-img"><img src="@img/image-1.png" alt=""></div>
           </div>
         </div>
       </section>
       <section class="mission section-pad-bottom section-hidden">
         <div class="container">
-          <div class="mission__container">
+          <div class="mission__container mission-trigger">
             <div class="mission__wrap">
               <img class="back back-1" src="@img/mission-1.svg" alt="">
-              <h2 class="mission__title">Миссия</h2>
-              <div class="mission__desc">Делать качественное образование в сфере бизнес-аналитики доступным, понятным и практичным. Мы стремимся обучать людей тому, как превращать данные в осознанные решения, развивать аналитическое мышление и уверенно применять современные инструменты анализа в реальной профессиональной среде.</div>
+              <h2 class="mission__title mission-down">Миссия</h2>
+              <div class="mission__desc mission-up">Делать качественное образование в сфере бизнес-аналитики доступным, понятным и практичным. Мы стремимся обучать людей тому, как превращать данные в осознанные решения, развивать аналитическое мышление и уверенно применять современные инструменты анализа в реальной профессиональной среде.</div>
               <img class="back back-2" src="@img/mission-2.svg" alt="">
             </div>
             <div class="worth__wrap">
               <ul class="worth__list worth__list_1">
-                <li>Доступность знаний</li>
-                <li>Постоянное развитие</li>
-                <li>Доступность знаний</li>
+                <li class="worth-scale">Доступность знаний</li>
+                <li class="worth-scale">Постоянное развитие</li>
+                <li class="worth-scale">Доступность знаний</li>
               </ul>
-              <h2 class="worth__title">Ценности</h2>
+              <h2 class="worth__title worth-down">Ценности</h2>
               <ul class="worth__list worth__list_2">
-                <li>Ответственность за результат</li>
-                <li>Качество и актуальность</li>
-                <li>Практическая пользаs</li>
+                <li class="worth-scale">Ответственность за результат</li>
+                <li class="worth-scale">Качество и актуальность</li>
+                <li class="worth-scale">Практическая пользаs</li>
               </ul>
               <img class="back" src="@img/worth.svg" alt="">
             </div>
@@ -98,10 +102,10 @@
       </section>
       <section class="projects section-pad-bottom section-hidden">
         <div class="container">
-          <div class="projects__container">
-            <h2 class="projects__title">Проекты</h2>
+          <div class="projects__container projects-trigger">
+            <h2 class="projects__title projects-down">Проекты</h2>
             <div class="projects__cards">
-              <div class="projects__card">
+              <div class="projects__card pbox-left">
                 <a href="" class="projects__img"><img src="@img/portf-1.png" alt=""></a>
                 <div class="projects__info">
                   <h3 class="projects__caption"><a href="">Детский сад Äldi bi</a></h3>
@@ -109,7 +113,7 @@
                   <a href="" class="projects__button button button-light">Подробнее</a>
                 </div>
               </div>
-              <div class="projects__card">
+              <div class="projects__card pbox-right">
                 <a href="" class="projects__img"><img src="@img/portf-2.png" alt=""></a>
                 <div class="projects__info">
                   <h3 class="projects__caption"><a href="">Quantum Stem School</a></h3>
@@ -117,7 +121,7 @@
                   <a href="" class="projects__button button button-light">Подробнее</a>
                 </div>
               </div>
-              <div class="projects__card">
+              <div class="projects__card pbox-left">
                 <a href="" class="projects__img"><img src="@img/portf-3.png" alt=""></a>
                 <div class="projects__info">
                   <h3 class="projects__caption"><a href="">Quantum Tech School</a></h3>
@@ -131,8 +135,8 @@
       </section>
       <section class="services section-pad-bottom section-hidden">
         <div class="container">
-          <div class="services__container">
-            <h2 class="services__title">Услуги</h2>
+          <div class="services__container services-trigger">
+            <h2 class="services__title services-down">Услуги</h2>
             <div class="services__cards">
               <a href="" class="services__card">
                 <div class="services__inner">
@@ -220,24 +224,24 @@
       </section>
       <section class="feedback section-pad-bottom section-hidden">
         <div class="container">
-          <div class="feedback__container">
+          <div class="feedback__container feedback-trigger">
             <div class="feedback__info">
-              <h2 class="feedback__title">Оставьте заявку и мы свяжемся с вами</h2>
-              <div class="feedback__desc">Поможем вам выбрать программу и ответим на все вопросы</div>
+              <h2 class="feedback__title feedback-down">Оставьте заявку и мы свяжемся с вами</h2>
+              <div class="feedback__desc feedback-down">Поможем вам выбрать программу и ответим на все вопросы</div>
               <div class="feedback__cards">
-                <div class="feedback__card">
+                <div class="feedback__card feedback-flip">
                   <div class="feedback__caption">Call center</div>
                   <a href="tel:800 100 975 25 54">800 100 975 25 54</a>
                 </div>
-                <div class="feedback__card">
+                <div class="feedback__card feedback-flip">
                   <div class="feedback__caption">Наш адрес</div>
                   <a href="" target="_blank">г. Астана, ул.Орынбор 25</a>
                 </div>
-                <div class="feedback__card">
+                <div class="feedback__card feedback-flip">
                   <div class="feedback__caption">Email</div>
                   <a href="mailto:BIeducation@mail.ru">BIeducation@mail.ru</a>
                 </div>
-                <div class="feedback__card">
+                <div class="feedback__card feedback-flip">
                   <div class="feedback__caption">Социальные сети</div>
                   <div class="feedback__socials">
                     <a href="" class="feedback__social" target="_blank">
@@ -265,7 +269,7 @@
                 </div>
               </div>
             </div>
-            <div class="feedback__form">
+            <div class="feedback__form feedback-form">
               <form action="">
                 <input type="text" name="name" placeholder="ФИО">
                 <input type="tel" name="phone" placeholder="Телефон">
