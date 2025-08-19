@@ -699,6 +699,11 @@
   .services__inner { transition: none; }
 }
 
+.is-ready .services__card:hover .services__inner,
+.is-ready .services__card:focus-visible .services__inner {
+  transform: rotateY(180deg);
+}
+
 .feedback {
   &__container {
     display: grid;

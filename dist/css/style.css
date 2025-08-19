@@ -1112,6 +1112,11 @@ h6 {
   font-size: calc(14 * var(--width-multiplier));
 }
 
+.is-ready .services__card:hover .services__inner,
+.is-ready .services__card:focus-visible .services__inner {
+  transform: rotateY(180deg);
+}
+
 .feedback__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

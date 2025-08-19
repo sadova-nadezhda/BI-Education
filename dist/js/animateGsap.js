@@ -159,7 +159,7 @@ export function animateGsap() {
     yoyo: true,
     scrollTrigger: {
       trigger: ".projects-trigger",
-      start: "top center",
+      start: "top bottom",
       end: "center",
       markers: false
     }
@@ -215,26 +215,35 @@ export function animateGsap() {
     yoyo: true,
     scrollTrigger: {
       trigger: ".services-trigger",
-      start: "top center",
+      start: "top bottom",
       end: "center",
       markers: false
     }
   });
 
-  gsap.set(".services__card .services__inner", {rotationY: 0, transformStyle: "preserve-3d"});
 
+  const targets = ".services__card .services__inner";
 
-  gsap.to(".services__card .services__inner", {
+  gsap.set(targets, {
+    rotationY: 0,
+    transformStyle: "preserve-3d"
+  });
+
+  gsap.to(targets, {
     rotationY: 180,
     duration: 0.8,
     ease: "power3.inOut",
     stagger: 0.1,
-    repeat: 1, 
-    yoyo: true, 
+    repeat: 1,
+    yoyo: true,
+    onComplete() {
+      gsap.set(targets, { clearProps: "transform" });
+      document.querySelector(".services")?.classList.add("is-ready");
+    },
     scrollTrigger: {
       trigger: ".services",
       start: "top 70%",
-      once: true 
+      once: true
     }
   });
 
