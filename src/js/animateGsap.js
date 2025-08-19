@@ -265,13 +265,13 @@ export function animateGsap() {
     }
   });
 
-  gsap.set(".feedback-flip", {
-    rotationX: 90,
+  gsap.set(".feedback-up", {
+    y: 100,
     opacity: 0
   });
-  gsap.to(".feedback-flip", {
+  gsap.to(".feedback-up", {
     duration: 1.6,
-    rotationX: 0,
+    y: 0,
     opacity: 1,
     ease: "power2.inOut",
     yoyo: true,
