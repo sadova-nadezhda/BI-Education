@@ -151,15 +151,37 @@
     border-radius: calc(8 * var(--width-multiplier));
     background-color: var(--primary, $primary);
     cursor: pointer;
+    transition: 0.3s ease;
     @media(max-width: 1024px) {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
     }
     span {
+      pointer-events: none;
       width: 100%;
       height: 2px;
       background-color: var(--white, $white);
+      transition: 0.3s ease;
+    }
+    &.active {
+      justify-content: center;
+
+      span {
+        width: 110%;
+      }
+
+      span:nth-child(1) {
+        transform: rotate(40deg) translateX(1px) translateY(3px);
+      }
+
+      span:nth-child(2) {
+        opacity: 0;
+      }
+
+      span:nth-child(3) {
+        transform: rotate(-40deg) translateY(-2px);
+      }
     }
   }
   &.scroll {
@@ -169,6 +191,9 @@
       padding: calc(10 * var(--width-multiplier)) 0;
       @media(max-width: 1024px) {
         padding: calc(16 * var(--width-multiplier)) 0;
+      }
+      @media(max-width: 767px) {
+        padding: calc(10 * var(--width-multiplier)) 0;
       }
     }
     @media(max-width: 1024px) {
