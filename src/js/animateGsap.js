@@ -47,6 +47,7 @@ export function animateGsap() {
     duration: 0.8,
     opacity: 1,
     scale: 1,
+    stagger: 0.1,
     ease: "power2.inOut",
     yoyo: true,
     scrollTrigger: {
@@ -223,31 +224,51 @@ export function animateGsap() {
     }
   });
 
+  if (window.innerWidth > 1024) {
+    const targets = ".services__card .services__inner";
+    gsap.set(targets, {
+      rotationY: 0,
+      transformStyle: "preserve-3d"
+    });
+    gsap.to(targets, {
+      rotationY: 180,
+      duration: 0.8,
+      ease: "power3.inOut",
+      stagger: 0.1,
+      repeat: 1,
+      yoyo: true,
+      onComplete() {
+        gsap.set(targets, { clearProps: "transform" });
+        document.querySelector(".services")?.classList.add("is-ready");
+      },
+      scrollTrigger: {
+        trigger: ".services",
+        start: "top 70%",
+        once: true
+      }
+    });
+  }
 
-  const targets = ".services__card .services__inner";
-
-  gsap.set(targets, {
-    rotationY: 0,
-    transformStyle: "preserve-3d"
-  });
-
-  gsap.to(targets, {
-    rotationY: 180,
-    duration: 0.8,
-    ease: "power3.inOut",
-    stagger: 0.1,
-    repeat: 1,
-    yoyo: true,
-    onComplete() {
-      gsap.set(targets, { clearProps: "transform" });
-      document.querySelector(".services")?.classList.add("is-ready");
-    },
-    scrollTrigger: {
-      trigger: ".services",
-      start: "top 70%",
-      once: true
-    }
-  });
+  else {
+    gsap.set(".services__card", {
+      y: 100,
+      opacity: 0
+    });
+    gsap.to(".services__card", {
+      duration: 0.8,
+      y: 0,
+      opacity: 1,
+      ease: "power2.inOut",
+      stagger: 0.1,
+      yoyo: true,
+      scrollTrigger: {
+        trigger: ".services-trigger",
+        start: "top bottom",
+        end: "center",
+        markers: false
+      }
+    });
+  }
 
   gsap.set(".feedback-down", {
     y: -200,
