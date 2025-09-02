@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "404" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="page-error page-default section-hidden">
+        <img class="back back-1" src="@img/back-1.svg" alt="">
+        <div class="page-default__container page-error__container">
+          <div class="page-default__box page-error__box">
+            <div class="page-default__num page-error__num">404</div>
+            <div class="page-default__title page-error__title">Ошибка. Что-то пошло не так</div>
+            <div class="page-default__txt page-error__txt">Перезагрузите страницу</div>
+          </div>
+          <a href="/" class="page-default__button page-error__button button button-primary">Обновить страницу</a>
+        </div>
+        <img class="back back-2" src="@img/back-2.svg" alt="">
+      </section>
+    </main>
+
+    @@include('html/modals.html')
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

@@ -84,6 +84,10 @@ body {
   color: var(--black, $black);
   font: 400 calc(16 * var(--width-multiplier))/1 Gotham;
   text-rendering: optimizeSpeed;
+  background-color: #ECEFF3;
+  &.light {
+    background-color: var(--white, $white);
+  }
 }
 
 ul,
@@ -189,6 +193,12 @@ select {
     position: relative;
     z-index: 1;
   }
+  svg {
+    min-width: calc(20 * var(--width-multiplier));
+    width: calc(20 * var(--width-multiplier));
+    height: calc(20 * var(--width-multiplier));
+    pointer-events: none;
+  }
   &:hover:not(:disabled) {
     cursor: pointer;
   }
@@ -230,7 +240,34 @@ select {
 // Heading
 
 h1 {
-  font: 500 calc(82 * var(--width-multiplier))/1 Gotham;
+  font: 500 calc(62 * var(--width-multiplier))/1 Gotham;
+  &.s {
+    font-size: calc(42 * var(--width-multiplier));
+    @media (max-width: 1024px) {
+      font-size: calc(32 * var(--width-multiplier));
+    }
+    @media (max-width: 767px) {
+      font-size: calc(24 * var(--width-multiplier));
+    }
+  }
+  &.l {
+    font-size: calc(82 * var(--width-multiplier));
+    @media (max-width: 1024px) {
+      font-size: calc(42 * var(--width-multiplier));
+    }
+    @media (max-width: 767px) {
+      font-size: calc(32 * var(--width-multiplier));
+    }
+  }
+  &.xl {
+    font-size: calc(120 * var(--width-multiplier));
+    @media (max-width: 1024px) {
+      font-size: calc(42 * var(--width-multiplier));
+    }
+    @media (max-width: 767px) {
+      font-size: calc(32 * var(--width-multiplier));
+    }
+  }
   @media (max-width: 1024px) {
     font-size: calc(42 * var(--width-multiplier));
   }
@@ -240,7 +277,16 @@ h1 {
 }
 
 h2 {
-  font: 500 calc(52 * var(--width-multiplier))/1.2 Gotham;
+  font: 500 calc(42 * var(--width-multiplier))/1.2 Gotham;
+  &.m {
+    font-size: calc(52 * var(--width-multiplier));
+    @media (max-width: 1024px) {
+      font-size: calc(42 * var(--width-multiplier));
+    }
+    @media (max-width: 767px) {
+      font-size: calc(32 * var(--width-multiplier));
+    }
+  }
   @media (max-width: 1024px) {
     font-size: calc(32 * var(--width-multiplier));
   }

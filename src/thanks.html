@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Спасибо за заявку" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="page-thanks page-default section-hidden">
+        <img class="back back-1" src="@img/back-1.svg" alt="">
+        <div class="page-default__container page-thanks__container">
+          <div class="page-default__title page-thanks__title">Спасибо за заявку!</div>
+          <a href="/" class="page-default__button page-thanks__button button button-primary">Вернуться на главную</a>
+        </div>
+        <img class="back back-2" src="@img/back-2.svg" alt="">
+      </section>
+    </main>
+
+    @@include('html/modals.html')
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

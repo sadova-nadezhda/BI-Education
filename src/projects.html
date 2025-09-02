@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Проекты" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="main-hero hero section-hidden">
+        <img src="@img/projects-hero.png" alt="">
+        <div class="container">
+          <div class="hero__container main-hero__container hero-op">
+            <div class="hero__wrap main-hero__wrap">
+              <h1 class="hero__title main-hero__title text-up"><span>Проекты</span></h1>
+              <div class="hero__desc main-hero__desc text-up">
+                <p>Эксперт в реализации и консалтинге образовательных проектов, создающий передовые условия для обучения и развития</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects section-pad section-hidden">
+        <div class="container">
+          <div class="projects__container projects-trigger">
+            <div class="projects__top">
+              <h2 class="projects__title projects-down">Проекты</h2>
+              <div class="projects__filter">
+
+              </div>
+            </div>
+            <div class="projects__cards">
+              <div class="projects__card pbox-left">
+                <a href="projects-inner.html" class="projects__img"><img src="@img/portf-1.png" alt=""></a>
+                <div class="projects__info">
+                  <h3 class="projects__caption"><a href="projects-inner.html">Детский сад Äldi bi</a></h3>
+                  <div class="projects__desc">В детском саду Aldi BI создана уникальная образовательная среда, где практикуется развитие эмоционального интеллекта и индивидуальный подход к каждому ребенку.</div>
+                  <a href="projects-inner.html" class="projects__button button button-light">Подробнее</a>
+                </div>
+              </div>
+              <div class="projects__card pbox-right">
+                <a href="projects-inner.html" class="projects__img"><img src="@img/portf-2.png" alt=""></a>
+                <div class="projects__info">
+                  <h3 class="projects__caption"><a href="projects-inner.html">Quantum Stem School</a></h3>
+                  <div class="projects__desc">Школа открылась в сентябре 2021 года. Применяя передовой опыт школ Сингапура и США, обучение основано на междисциплинарном подходе в математике, точных науках и инженерии.</div>
+                  <a href="projects-inner.html" class="projects__button button button-light">Подробнее</a>
+                </div>
+              </div>
+              <div class="projects__card pbox-left">
+                <a href="projects-inner.html" class="projects__img"><img src="@img/portf-3.png" alt=""></a>
+                <div class="projects__info">
+                  <h3 class="projects__caption"><a href="projects-inner.html">Quantum Tech School</a></h3>
+                  <div class="projects__desc">Школа будущего, где для учащихся открывается целый мир технологических возможностей путем интеграции международных образовательных программ.</div>
+                  <a href="projects-inner.html" class="projects__button button button-light">Подробнее</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/modals.html')
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

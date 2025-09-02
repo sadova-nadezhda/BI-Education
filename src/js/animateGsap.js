@@ -323,4 +323,95 @@ export function animateGsap() {
       markers: false
     }
   });
+
+  gsap.set(".news-down", {
+    y: -200,
+    opacity: 0
+  });
+  gsap.to(".news-down", {
+    duration: 0.8,
+    y: 0,
+    opacity: 1,
+    ease: "power2.inOut",
+    yoyo: true,
+    scrollTrigger: {
+      trigger: ".news-trigger",
+      start: "top bottom",
+      end: "center",
+      markers: false
+    }
+  });
+
+  gsap.set(".news-up", {
+    y: 100,
+    opacity: 0
+  });
+  gsap.to(".news-up", {
+    duration: 0.8,
+    y: 0,
+    opacity: 1,
+    ease: "power2.inOut",
+    yoyo: true,
+    scrollTrigger: {
+      trigger: ".news-trigger",
+      start: "top center",
+      end: "center",
+      markers: false
+    }
+  });
+
+  gsap.set(".contacts-down", {
+    y: -200,
+    opacity: 0
+  });
+  gsap.to(".contacts-down", {
+    duration: 0.8,
+    y: 0,
+    opacity: 1,
+    ease: "power2.inOut",
+    yoyo: true,
+    scrollTrigger: {
+      trigger: ".contacts-trigger",
+      start: "top bottom",
+      end: "center",
+      markers: false
+    }
+  });
+
+  gsap.set(".contacts-up", {
+    y: 100,
+    opacity: 0
+  });
+  gsap.to(".contacts-up", {
+    duration: 0.8,
+    y: 0,
+    opacity: 1,
+    ease: "power2.inOut",
+    stagger: 0.2,
+    yoyo: true,
+    scrollTrigger: {
+      trigger: ".contacts-trigger",
+      start: "top center",
+      end: "center",
+      markers: false
+    }
+  });
+
+  const scrollTriggerConfig = {
+    start: "top bottom",
+    end: "bottom 20%",
+  };
+
+  gsap.utils.toArray(".up").forEach(element => {
+    gsap.fromTo(element,
+      { yPercent: 60, opacity: 0 },
+      {
+        duration: 1.2,
+        opacity: 1,
+        yPercent: 0,
+        ease: "power2.out",
+        scrollTrigger: { trigger: element, ...scrollTriggerConfig }
+      }
+    );
+  });
 }

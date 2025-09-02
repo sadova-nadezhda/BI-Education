@@ -146,6 +146,16 @@ window.addEventListener("load", function () {
     })
   }
 
+  // Swipers
+
+  var projectsSwiper = new Swiper(".projectsSwiper", {
+    spaceBetween: 16,
+    navigation: {
+      nextEl: ".projects-next",
+      prevEl: ".projects-prev",
+    },
+  });
+
   // Phone
   
   [].forEach.call( document.querySelectorAll('input[type="tel"]'), function(input) {

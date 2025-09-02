@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Проекты" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="main-hero hero section-hidden">
+        <img src="@img/projects-hero-2.png" alt="">
+        <div class="container">
+          <div class="hero__container main-hero__container hero-op">
+            <div class="hero__wrap main-hero__wrap">
+              <h1 class="hero__title main-hero__title title-indent text-up"><span>Quantum Stem School</span></h1>
+              <div class="hero__desc main-hero__desc text-up">
+                <p>Эксперт в реализации и консалтинге образовательных проектов, создающий передовые условия для обучения и развития</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects-inner section-pad section-hidden">
+        <div class="container">
+          <div class="projects-inner__container">
+            <div class="projects-inner__slider up">
+              <div class="swiper projectsSwiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><img src="@img/projects-inner.png" alt=""></div>
+                  <div class="swiper-slide"><img src="@img/projects-inner.png" alt=""></div>
+                  <div class="swiper-slide"><img src="@img/projects-inner.png" alt=""></div>
+                </div>
+              </div>
+                <div class="projects-inner-button projects-prev">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15 8.24138L1 8.24138M1 8.24138L8 15M1 8.24138L8 1" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+                <div class="projects-inner-button projects-next">
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M1 7.75862H15M15 7.75862L8 1M15 7.75862L8 15" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+            </div>
+            <div class="projects-inner__desc up">
+              <p>За это время мы прошли путь от небольшой строительной фирмы до международного девелопера с амбициозными проектами в Казахстане и за его пределами. BI Group реализует проекты в сферах жилой и коммерческой недвижимости, инфраструктурного, индустриального и нефтегазового строительства, а также активно развивает направление инвестиций и цифровых решений в строительстве.</p>
+              <p>Школа открылась в сентябре 2021 года. Применяя передовой опыт школ Сингапура и США, обучение основано на междисциплинарном подходе в математике, точных науках и инженерии.</p>
+              <p>Мы внедряем мировые практики образования в казахстанский контекст, сочетая STEM-подход, проектное обучение, развитие soft skills и цифровую трансформацию обучения. BI Education — это школа, где ученики не просто получают знания, а учатся мыслить, создавать и влиять.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="projects-teams section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="projects-teams__container projects-trigger">
+            <h2 class="projects-teams__title title-indent projects-down">Команда</h2>
+            <div class="projects-teams__cards">
+              <div class="projects-teams__card up">
+                <img src="@img/teams-1.jpg" alt="">
+                <div class="projects-teams__box">
+                  <div class="projects-teams__caption">Анастасия Сергеева</div>
+                  <div class="projects-teams__position">Преподаватель</div>
+                </div>
+              </div>
+              <div class="projects-teams__card up">
+                <img src="@img/teams-2.jpg" alt="">
+                <div class="projects-teams__box">
+                  <div class="projects-teams__caption">Зайнулин Раиф</div>
+                  <div class="projects-teams__position">Исполнительный директор</div>
+                </div>
+              </div>
+              <div class="projects-teams__card up">
+                <img src="@img/teams-3.jpg" alt="">
+                <div class="projects-teams__box">
+                  <div class="projects-teams__caption">Кадырова Шолпан</div>
+                  <div class="projects-teams__position">Исполнительный директор</div>
+                </div>
+              </div>
+              <div class="projects-teams__card up">
+                <img src="@img/teams-4.png" alt="">
+                <div class="projects-teams__box">
+                  <div class="projects-teams__caption">Каргин Мади</div>
+                  <div class="projects-teams__position">Директор компании</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/modals.html')
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>
