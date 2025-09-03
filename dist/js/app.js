@@ -189,11 +189,14 @@ window.addEventListener("load", function () {
 
   animateGsap();
 
-  // Tabs
-
-  var tabs = new Tabby('[data-tabs]');
-
   window.addEventListener("scroll", ()=> {
     checkScroll();
   });
+
+  // Tabs
+
+  var tabsEl = document.querySelector('.tabs');
+  if (tabsEl) {
+    var tabs = new Tabby('[data-tabs]');
+  }
 });
