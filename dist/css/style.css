@@ -397,10 +397,12 @@ h6 {
   flex-direction: column;
   gap: calc(14 * var(--width-multiplier));
   min-width: calc(148 * var(--width-multiplier));
+  margin: calc(12 * var(--width-multiplier));
   margin-top: calc(24 * var(--width-multiplier));
   padding: calc(18 * var(--width-multiplier));
   border-radius: calc(22 * var(--width-multiplier));
   background-color: var(--white, #FFFFFF);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
 }
 
 .header__lang {
@@ -1103,7 +1105,64 @@ h6 {
 }
 
 .projects__top {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: calc(20 * var(--width-multiplier));
   margin-bottom: calc(32 * var(--width-multiplier));
+  z-index: 1;
+}
+
+.projects__filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: calc(8 * var(--width-multiplier));
+}
+
+.projects__filter .nice-select {
+  height: auto;
+  padding: calc(20 * var(--width-multiplier)) calc(32 * var(--width-multiplier));
+  border-radius: calc(52 * var(--width-multiplier));
+  border: 0;
+  color: var(--white, #FFFFFF);
+  background-color: var(--primary, #27348B);
+  font-weight: 500;
+  font-size: calc(16 * var(--width-multiplier));
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.projects__filter .nice-select::after {
+  content: none;
+}
+
+.projects__filter .nice-select .list {
+  padding: calc(20 * var(--width-multiplier));
+  margin-top: calc(4 * var(--width-multiplier));
+  color: var(--black, #000000);
+  border-radius: calc(28 * var(--width-multiplier));
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+}
+
+.projects__filter .nice-select .option {
+  min-height: auto;
+  padding: calc(8 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  font-weight: 500;
+  font-size: calc(16 * var(--width-multiplier));
+  line-height: 1;
+  cursor: text;
+}
+
+.projects__filter .nice-select .option.focus {
+  background-color: transparent;
+}
+
+.projects__filter .nice-select .option:hover:not(.selected) {
+  cursor: pointer;
+  color: var(--primary, #27348B);
+  background-color: transparent;
 }
 
 .projects__cards {
@@ -1373,7 +1432,12 @@ h6 {
   transform: rotateY(180deg);
 }
 
+.main-hero__title {
+  max-width: calc(480 * var(--width-multiplier));
+}
+
 .main-hero__desc {
+  max-width: calc(630 * var(--width-multiplier));
   margin-bottom: 0;
 }
 
@@ -2158,6 +2222,16 @@ h6 {
     font-size: calc(14 * var(--width-multiplier));
   }
 
+  .projects__top {
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  .projects__filter .nice-select {
+    padding: calc(20 * var(--width-multiplier));
+  }
+
   .projects-inner__slider {
     height: calc(320 * var(--width-multiplier));
   }
@@ -2533,6 +2607,14 @@ h6 {
 
   .projects__top {
     margin-bottom: calc(20 * var(--width-multiplier));
+  }
+
+  .projects__filter .nice-select .list {
+    padding: calc(10 * var(--width-multiplier)) calc(12 * var(--width-multiplier));
+  }
+
+  .projects__filter .nice-select {
+    padding: calc(12 * var(--width-multiplier)) calc(24 * var(--width-multiplier));
   }
 
   .projects__cards {

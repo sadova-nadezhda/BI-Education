@@ -200,3 +200,8 @@ window.addEventListener("load", function () {
     var tabs = new Tabby('[data-tabs]');
   }
 });
+
+
+$(document).ready(function() {
+  $('.filter').niceSelect();
+});
