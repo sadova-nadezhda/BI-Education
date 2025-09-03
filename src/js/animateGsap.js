@@ -397,6 +397,25 @@ export function animateGsap() {
     }
   });
 
+  gsap.set(".vacancies-up", {
+    y: 100,
+    opacity: 0
+  });
+  gsap.to(".vacancies-up", {
+    duration: 0.8,
+    y: 0,
+    opacity: 1,
+    ease: "power2.inOut",
+    stagger: 0.2,
+    yoyo: true,
+    scrollTrigger: {
+      trigger: ".vacancies-trigger",
+      start: "top center",
+      end: "center",
+      markers: false
+    }
+  });
+
   const scrollTriggerConfig = {
     start: "top bottom",
     end: "bottom 20%",

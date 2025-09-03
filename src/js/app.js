@@ -42,15 +42,13 @@ window.addEventListener("load", function () {
           closeAllDropdowns();
           parent.classList.add("open");
           const dropdown = parent.querySelector(".dropdown-menu");
-          dropdown.style.maxHeight = dropdown.scrollHeight + 32 + "px";
-          dropdown.style.paddingTop = "30px";
+          dropdown.style.maxHeight = dropdown.scrollHeight + "px";
         });
 
         parent.addEventListener("mouseleave", () => {
           parent.classList.remove("open");
           const dropdown = parent.querySelector(".dropdown-menu");
           dropdown.style.maxHeight = null;
-          dropdown.style.paddingTop = 0;
         });
       });
     }
@@ -62,16 +60,14 @@ window.addEventListener("load", function () {
           e.preventDefault();
           const parent = toggle.closest(".button-dropdown");
           const dropdown = parent.querySelector(".dropdown-menu");
-          const height = dropdown.scrollHeight + 20;
+          const height = dropdown.scrollHeight;
 
           if (parent.classList.contains("open")) {
             parent.classList.remove("open");
             dropdown.style.maxHeight = null;
-            dropdown.style.paddingTop = 0;
           } else {
             closeAllDropdowns();
             dropdown.style.maxHeight = height + "px";
-            dropdown.style.paddingTop = "20px";
             parent.classList.add("open");
           }
         });
@@ -192,6 +188,10 @@ window.addEventListener("load", function () {
   });
 
   animateGsap();
+
+  // Tabs
+
+  var tabs = new Tabby('[data-tabs]');
 
   window.addEventListener("scroll", ()=> {
     checkScroll();

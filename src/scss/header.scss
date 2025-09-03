@@ -100,10 +100,12 @@
     flex-direction: column;
     gap: calc(14 * var(--width-multiplier));
     min-width: calc(148 * var(--width-multiplier));
+    margin-top: calc(24 * var(--width-multiplier));
     padding: calc(18 * var(--width-multiplier));
     border-radius: calc(22 * var(--width-multiplier));
     background-color: var(--white, $white);
     @media(max-width: 1024px) {
+      margin-top: calc(20 * var(--width-multiplier));
       padding: 0;
       padding-left: calc(8 * var(--width-multiplier));
       border-radius: 0;
