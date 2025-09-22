@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  @@include('html/head.html', { "title": "Вакансии" })
+  <body>
+    @@include('html/header.html')
+
+    <main>
+      <section class="main-hero hero section-hidden">
+        <img src="@img/projects-hero.png" alt="">
+        <div class="container">
+          <div class="hero__container main-hero__container hero-op">
+            <div class="hero__wrap main-hero__wrap">
+              <h1 class="hero__title main-hero__title text-up"><span>Персональный AI-тьютор</span></h1>
+              <div class="hero__desc main-hero__desc text-up">
+                Мы запускаем в наших школах систему персонального адаптивного обучения
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="education section-pad section-hidden">
+        <div class="container">
+          <div class="education__container about-trigger">
+            <div class="education__img about-down">
+              <img src="@img/image-6.png" alt="">
+            </div>
+            <div class="education__info about-down">
+              <h2 class="education__title s">Хотите, чтобы ваш ребёнок учился с персональным AI-тьютором одним из первых?</h2>
+              <div class="education__desc">Мы запускаем в наших школах систему персонального адаптивного обучения.</div>
+              <div class="education__desc">Она помогает каждому ученику:</div>
+              <ul class="education__list">
+                <li>выявить пробелы в знаниях</li>
+                <li>построить персональный маршрут обучения</li>
+                <li>заниматься в удобном формате (текст, видео, игровые задания)</li>
+                <li>получать поддержку и отчёты о прогрессе</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="feedback section-pad-bottom section-hidden">
+        <div class="container">
+          <div class="feedback__container feedback-trigger">
+            <div class="feedback__info">
+              <h2 class="feedback__title feedback-down s">Мы приглашаем родителей и учеников принять участие в первом наборе пользователей новой системы.</h2>
+              <div class="feedback__desc feedback-down">Если вы хотите, чтобы ваш ребёнок получил доступ к персональному AI-тьютору и начал обучение раньше всех, заполните короткую заявку ниже. Это не обязывает вас к оплате — мы соберём список заинтересованных семей и свяжемся с вами первыми, когда стартует доступ.</div>
+            </div>
+            <div class="feedback__form feedback-down">
+              <form action="">
+                <input type="text" name="name" placeholder="ФИО">
+                <input type="tel" name="phone" placeholder="Телефон">
+                <button type="submit" class="button button-light">Отправить заявку</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    @@include('html/modals.html')
+    @@include('html/footer.html')
+    @@include('html/foot.html')
+  </body>
+</html>

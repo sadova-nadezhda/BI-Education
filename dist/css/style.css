@@ -158,7 +158,7 @@ select {
   padding: 0 calc(80 * var(--width-multiplier));
 }
 
-input,
+input:not([type=submit]),
 textarea,
 select {
   width: 100%;
@@ -170,11 +170,11 @@ select {
   font: inherit;
 }
 
-input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+input:not([type=submit])::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
   color: rgba(0, 0, 0, 0.5);
 }
 
-input::placeholder,
+input:not([type=submit])::placeholder,
 textarea::placeholder,
 select::placeholder {
   color: rgba(0, 0, 0, 0.5);
@@ -291,6 +291,10 @@ h1.xl {
 
 h2 {
   font: 500 calc(42 * var(--width-multiplier))/1.2 Gotham;
+}
+
+h2.s {
+  font-size: calc(24 * var(--width-multiplier));
 }
 
 h2.m {
@@ -718,7 +722,7 @@ h6 {
 }
 
 .form select,
-.form input {
+.form input:not([type=submit]) {
   width: 100%;
   background-color: var(--white, #FFFFFF);
 }
@@ -1018,7 +1022,6 @@ h6 {
   color: var(--white, #FFFFFF);
   background-color: var(--primary, #27348B);
   overflow: hidden;
-  text-align: center;
 }
 
 .mission__wrap .back {
@@ -1038,7 +1041,10 @@ h6 {
 }
 
 .mission__title {
+  max-width: calc(630 * var(--width-multiplier));
+  margin: 0 auto;
   margin-bottom: calc(80 * var(--width-multiplier));
+  text-align: center;
 }
 
 .mission__desc {
@@ -1046,6 +1052,7 @@ h6 {
   margin: 0 auto;
   color: rgba(255, 255, 255, 0.8);
   font-size: calc(18 * var(--width-multiplier));
+  text-align: center;
 }
 
 .worth__wrap {
@@ -1102,6 +1109,43 @@ h6 {
   background-color: var(--white, #FFFFFF);
   font-weight: 500;
   text-transform: uppercase;
+}
+
+.education__container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: calc(32 * var(--width-multiplier));
+}
+
+.education__title {
+  max-width: calc(700 * var(--width-multiplier));
+  margin-bottom: calc(32 * var(--width-multiplier));
+}
+
+.education__desc {
+  margin-bottom: calc(16 * var(--width-multiplier));
+}
+
+.education__list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(10 * var(--width-multiplier));
+  line-height: 1;
+  list-style: disc inside !important;
+}
+
+.education__img {
+  height: calc(420 * var(--width-multiplier));
+  border-radius: calc(16 * var(--width-multiplier));
+  overflow: hidden;
+}
+
+.education__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .projects__top {
@@ -1444,6 +1488,7 @@ h6 {
 .feedback__container {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  align-items: flex-start;
   gap: calc(32 * var(--width-multiplier));
 }
 
@@ -1524,7 +1569,7 @@ h6 {
   background: url(../img/feedback-icon.svg) 50% 0%/contain no-repeat;
 }
 
-.feedback__form input,
+.feedback__form input:not([type=submit]),
 .feedback__form textarea,
 .feedback__form select {
   padding: 0;
@@ -1535,11 +1580,11 @@ h6 {
   color: var(--white, #FFFFFF);
 }
 
-.feedback__form input::-moz-placeholder, .feedback__form textarea::-moz-placeholder, .feedback__form select::-moz-placeholder {
+.feedback__form input:not([type=submit])::-moz-placeholder, .feedback__form textarea::-moz-placeholder, .feedback__form select::-moz-placeholder {
   color: var(--white, #FFFFFF);
 }
 
-.feedback__form input::placeholder,
+.feedback__form input:not([type=submit])::placeholder,
 .feedback__form textarea::placeholder,
 .feedback__form select::placeholder {
   color: var(--white, #FFFFFF);
@@ -1558,7 +1603,7 @@ h6 {
   cursor: pointer;
 }
 
-.feedback__form button {
+.feedback__form .button {
   width: 100%;
   margin-top: calc(16 * var(--width-multiplier));
 }
@@ -1977,6 +2022,10 @@ h6 {
     font-size: calc(42 * var(--width-multiplier));
   }
 
+  h2.s {
+    font-size: calc(22 * var(--width-multiplier));
+  }
+
   h2.m {
     font-size: calc(42 * var(--width-multiplier));
   }
@@ -2222,6 +2271,10 @@ h6 {
     font-size: calc(14 * var(--width-multiplier));
   }
 
+  .education__img {
+    height: calc(320 * var(--width-multiplier));
+  }
+
   .projects__top {
     flex-direction: column;
     align-items: flex-start;
@@ -2419,7 +2472,7 @@ h6 {
     --width-current: 100vmin;
   }
 
-  input,
+  input:not([type=submit]),
   textarea,
   select {
     padding: calc(12 * var(--width-multiplier)) calc(16 * var(--width-multiplier));
@@ -2445,6 +2498,10 @@ h6 {
 
   h1 {
     font-size: calc(32 * var(--width-multiplier));
+  }
+
+  h2.s {
+    font-size: calc(20 * var(--width-multiplier));
   }
 
   h2.m {
@@ -2603,6 +2660,18 @@ h6 {
 
   .worth__list {
     gap: calc(20 * var(--width-multiplier));
+  }
+
+  .education__container {
+    grid-template-columns: 1fr;
+  }
+
+  .education__title {
+    margin-bottom: calc(20 * var(--width-multiplier));
+  }
+
+  .education__img {
+    height: calc(220 * var(--width-multiplier));
   }
 
   .projects__top {

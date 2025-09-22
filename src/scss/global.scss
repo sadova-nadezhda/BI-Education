@@ -138,7 +138,7 @@ select {
   }
 }
 
-input, textarea, select {
+input:not([type="submit"]), textarea, select {
   width: 100%;
   padding: calc(16 * var(--width-multiplier));
   border: 1px solid rgba(0, 0, 0, 0.2);
@@ -278,6 +278,15 @@ h1 {
 
 h2 {
   font: 500 calc(42 * var(--width-multiplier))/1.2 Gotham;
+  &.s {
+    font-size: calc(24 * var(--width-multiplier));
+    @media (max-width: 1024px) {
+      font-size: calc(22 * var(--width-multiplier));
+    }
+    @media (max-width: 767px) {
+      font-size: calc(20 * var(--width-multiplier));
+    }
+  }
   &.m {
     font-size: calc(52 * var(--width-multiplier));
     @media (max-width: 1024px) {
